@@ -1,0 +1,57 @@
+[
+  {
+    "id": "step1",
+    "order": 1,
+    "title": "Arrival & Registration",
+    "whatToDo": "Go to the International Department reception desk on the 1st floor. Show your passport and insurance card.",
+    "whereToGo": "Main entrance → Turn right → International Department Reception (look for blue 'International' signs)",
+    "whatToSay": "Hello, I need to see a doctor for a general checkup. I have international insurance.",
+    "whatToSayZh": "你好，我需要看医生做常规检查。我有国际保险。",
+    "whatHappensNext": "The receptionist will create your patient file, verify your insurance, and give you a registration number. This takes about 5-10 minutes.",
+    "estimatedTime": "10-15 min"
+  },
+  {
+    "id": "step2",
+    "order": 2,
+    "title": "Payment & Queue",
+    "whatToDo": "Pay the consultation fee at the payment counter. Keep your receipt. Then wait in the designated waiting area.",
+    "whereToGo": "Payment counter is next to the reception desk. After payment, go to Waiting Area B (second floor).",
+    "whatToSay": "I need to pay for my consultation. Here is my registration number.",
+    "whatToSayZh": "我需要支付挂号费。这是我的挂号号码。",
+    "whatHappensNext": "After payment, your queue number will appear on the screen. Wait for your number to be called. Average wait time is 20-40 minutes.",
+    "estimatedTime": "5 min + wait"
+  },
+  {
+    "id": "step3",
+    "order": 3,
+    "title": "Doctor Consultation",
+    "whatToDo": "When your number is called, go to the consultation room. Explain your symptoms clearly. The doctor will examine you and may order tests.",
+    "whereToGo": "Watch the screen for your queue number and room number. Consultation rooms are along the corridor on the 2nd floor.",
+    "whatToSay": "I have been feeling [describe symptoms]. It started [when]. I am concerned about [specific concern].",
+    "whatToSayZh": "我感觉[症状]。从[时间]开始的。我担心[具体问题]。",
+    "whatHappensNext": "The doctor will examine you, ask questions, and decide if you need tests or prescriptions. Consultation typically takes 15-20 minutes.",
+    "estimatedTime": "15-20 min"
+  },
+  {
+    "id": "step4",
+    "order": 4,
+    "title": "Tests & Lab Work",
+    "whatToDo": "If the doctor ordered tests, take your test forms to the lab on the 1st floor. Pay for tests at the payment counter first.",
+    "whereToGo": "Go back to 1st floor → Payment counter → Then to the Lab (next to radiology department).",
+    "whatToSay": "I need to do these tests. Here are my forms from the doctor.",
+    "whatToSayZh": "我需要做这些检查。这是医生开的单子。",
+    "whatHappensNext": "Lab staff will collect samples (blood, urine, etc.). Results are usually ready in 1-2 hours. You can wait or come back later.",
+    "estimatedTime": "30 min + results wait"
+  },
+  {
+    "id": "step5",
+    "order": 5,
+    "title": "Get Prescription & Leave",
+    "whatToDo": "Return to the doctor with your test results. The doctor will review and give you a prescription. Take it to the pharmacy.",
+    "whereToGo": "Return to the same consultation room → Then go to the pharmacy on the 1st floor (near the main entrance).",
+    "whatToSay": "Here are my test results. What is the next step?",
+    "whatToSayZh": "这是我的检查结果。下一步怎么办？",
+    "whatHappensNext": "The doctor will explain your results and prescribe medication if needed. Pick up medicine at the pharmacy. Pay before collecting medicine.",
+    "estimatedTime": "20 min"
+  }
+]

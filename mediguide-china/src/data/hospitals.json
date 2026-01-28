@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pkuih",
+    "name": "Peking University International Hospital",
+    "nameZh": "北京大学国际医院",
+    "address": "1 Life Park Road, Changping District, Beijing",
+    "addressZh": "北京市昌平区生命园路1号",
+    "phone": "+86 10 6900 6900",
+    "englishLevel": "high",
+    "waitTime": "30-60 min",
+    "acceptsInsurance": true,
+    "location": {
+      "lat": 40.0736,
+      "lng": 116.2364
+    }
+  },
+  {
+    "id": "bjuh",
+    "name": "Beijing United Family Hospital",
+    "nameZh": "北京和睦家医院",
+    "address": "2 Jiangtai Road, Chaoyang District, Beijing",
+    "addressZh": "北京市朝阳区将台路2号",
+    "phone": "+86 10 5927 7000",
+    "englishLevel": "high",
+    "waitTime": "20-40 min",
+    "acceptsInsurance": true,
+    "location": {
+      "lat": 39.9847,
+      "lng": 116.4897
+    }
+  }
+]
