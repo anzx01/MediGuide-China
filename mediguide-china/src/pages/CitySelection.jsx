@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CityIcon, InsuranceIcon, CheckCircleIcon, ArrowLeftIcon } from '../components/Icons'
+import { CheckCircleIcon, ArrowLeftIcon } from '../components/Icons'
 
 function CitySelection() {
   const navigate = useNavigate()
@@ -24,71 +24,66 @@ function CitySelection() {
     <div className="container">
       <div className="page-header">
         <h1 className="page-title">Find Your Hospital</h1>
-        <p className="page-subtitle">Answer 2 quick questions to get personalized recommendations</p>
+        <p className="page-subtitle">Answer 2 quick questions</p>
       </div>
 
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <div className="card mb-3">
-          <div style={{ display: 'flex', gap: '12px', marginBottom: '20px' }} role="progressbar" aria-valuenow={step} aria-valuemin="1" aria-valuemax="2">
-            <div style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              backgroundColor: step >= 1 ? 'var(--primary-color)' : 'var(--border-color)',
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: '600'
-            }} aria-label="Step 1">1</div>
-            <div style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              backgroundColor: step >= 2 ? 'var(--primary-color)' : 'var(--border-color)',
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: '600'
-            }} aria-label="Step 2">2</div>
-          </div>
+        {/* Progress indicator */}
+        <div style={{
+          display: 'flex',
+          gap: '8px',
+          marginBottom: '32px',
+          justifyContent: 'center'
+        }} role="progressbar" aria-valuenow={step} aria-valuemin="1" aria-valuemax="2">
+          <div style={{
+            width: '40px',
+            height: '4px',
+            borderRadius: '2px',
+            backgroundColor: step >= 1 ? 'var(--primary-color)' : 'var(--border-color)',
+            transition: 'background-color 0.3s ease'
+          }} aria-label="Step 1" />
+          <div style={{
+            width: '40px',
+            height: '4px',
+            borderRadius: '2px',
+            backgroundColor: step >= 2 ? 'var(--primary-color)' : 'var(--border-color)',
+            transition: 'background-color 0.3s ease'
+          }} aria-label="Step 2" />
+        </div>
 
+        <div className="card">
           {step === 1 && (
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                <CityIcon className="w-8 h-8" style={{ color: 'var(--primary-color)' }} />
-                <h2 className="card-title" style={{ margin: 0 }}>Question 1: Which city are you in?</h2>
-              </div>
-              <p className="card-description mb-3">Select your current location</p>
+              <h2 className="card-title mb-2" style={{ fontSize: '24px' }}>
+                Which city are you in?
+              </h2>
+              <p className="card-description mb-4">Select your current location</p>
+
               <button
                 onClick={() => handleCitySelect('beijing')}
                 className="btn btn-primary btn-large"
                 aria-label="Select Beijing"
               >
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-                  <CityIcon className="w-6 h-6" />
-                  <span>Beijing</span>
-                </div>
+                Beijing
               </button>
             </div>
           )}
 
           {step === 2 && (
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                <InsuranceIcon className="w-8 h-8" style={{ color: 'var(--primary-color)' }} />
-                <h2 className="card-title" style={{ margin: 0 }}>Question 2: Do you have international health insurance?</h2>
-              </div>
-              <p className="card-description mb-3">This helps us recommend the right hospital for you</p>
+              <h2 className="card-title mb-2" style={{ fontSize: '24px' }}>
+                Do you have international health insurance?
+              </h2>
+              <p className="card-description mb-4">This helps us recommend the right hospital</p>
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <button
                   onClick={() => handleInsuranceSelect('yes')}
                   className="btn btn-primary btn-large"
                   aria-label="Yes, I have insurance"
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-                    <CheckCircleIcon className="w-6 h-6" />
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                    <CheckCircleIcon className="w-5 h-5" />
                     <span>Yes, I have insurance</span>
                   </div>
                 </button>
@@ -97,9 +92,7 @@ function CitySelection() {
                   className="btn btn-outline btn-large"
                   aria-label="No insurance"
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-                    <span>No insurance</span>
-                  </div>
+                  No insurance
                 </button>
               </div>
             </div>
@@ -107,14 +100,15 @@ function CitySelection() {
         </div>
 
         {step === 2 && (
-          <div className="text-center">
+          <div className="text-center mt-3">
             <button
               onClick={() => setStep(1)}
               className="btn btn-outline"
               aria-label="Go back to previous question"
+              style={{ padding: '10px 20px' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <ArrowLeftIcon className="w-5 h-5" />
+                <ArrowLeftIcon className="w-4 h-4" />
                 <span>Back</span>
               </div>
             </button>
