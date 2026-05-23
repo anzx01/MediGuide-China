@@ -183,11 +183,25 @@ Contributions are welcome! Please ensure:
 
 ## License
 
-[Add your license information here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## Important Medical Disclaimer
 
-[Add contact information or support channels here]
+**⚠️ CRITICAL LEGAL NOTICE:**
+
+MediGuide China is a navigation and information tool only. It is **NOT**:
+- Medical advice
+- A substitute for professional medical consultation
+- A diagnosis or treatment recommendation tool
+- A guarantee of hospital services or availability
+
+**Always consult qualified healthcare professionals for all medical decisions.**
+
+Users assume all responsibility for decisions made using this tool. Contributors and maintainers are not liable for any medical outcomes, misuse, or damages resulting from the use of this application.
+
+## Contact & Support
+
+For questions, feedback, or to report issues, please open an issue on GitHub.
 
 ## Version History
 

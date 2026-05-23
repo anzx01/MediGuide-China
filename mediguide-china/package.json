@@ -1,7 +1,8 @@
 {
   "name": "mediguide-china",
-  "private": true,
-  "version": "0.0.0",
+  "description": "A navigation tool to help English-speaking visitors find their way through Chinese hospitals with step-by-step guidance, location information, and translation assistance.",
+  "license": "MIT",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
