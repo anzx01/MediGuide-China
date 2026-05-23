@@ -15,7 +15,7 @@ function Home() {
     {
       id: 'emergency',
       title: 'Emergency',
-      description: 'Urgent medical attention',
+      description: 'Use local emergency services',
       path: '/placeholder/emergency',
       enabled: false
     },
@@ -45,12 +45,12 @@ function Home() {
     <div className="container">
       <div className="page-header">
         <h1 className="page-title">MediGuide China</h1>
-        <p className="page-subtitle">Navigate Chinese hospitals with confidence</p>
+        <p className="page-subtitle">Static guidance for non-emergency hospital visits</p>
       </div>
 
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
         <div className="alert alert-info mb-4" role="alert">
-          Select your situation to get step-by-step guidance
+          Select a non-emergency situation to get step-by-step navigation guidance
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>

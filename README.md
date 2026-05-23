@@ -1,29 +1,21 @@
 # MediGuide China
 
-A navigation tool designed to help English-speaking visitors find their way through Chinese hospitals with step-by-step guidance, location information, and translation assistance.
+MediGuide China is a static navigation prototype for English-speaking visitors preparing for non-emergency hospital visits in China. It provides step-by-step hospital navigation guidance, public contact information, and bilingual phrases for common administrative situations.
 
-## Overview
-
-MediGuide China simplifies the hospital visit experience for foreigners in China by providing:
-- Hospital recommendations based on location and insurance status
-- Step-by-step navigation through the visit process
-- English and Chinese phrases for common situations
-- General guidance on hospital procedures
-
-**⚠️ Important:** This is NOT medical advice. This tool provides navigation assistance only and does not replace professional medical consultation.
+**Important:** This is not medical advice, diagnosis, triage, insurance verification, or emergency support. For possible emergencies, contact local emergency services immediately.
 
 ## Features
 
 ### Current Features (MVP v1.0.0)
 - **Situation Selection**: Choose from different visit types (General Checkup, Emergency, Specialist Visit, Pharmacy)
-- **City-Based Recommendations**: Hospital suggestions based on your location (currently Beijing)
-- **Insurance Filtering**: Tailored recommendations based on international health insurance status
+- **City-Based Options**: Static hospital information for Beijing
+- **Insurance Prompt**: Reminds users to confirm billing and coverage directly
 - **Visit Progress Tracking**: Step-by-step guidance through the hospital visit process
 - **Bilingual Support**: English and Chinese phrases for common situations
 - **Disclaimer Modal**: Clear communication about the app's limitations and purpose
 
 ### Coming Soon
-- Emergency visit guidance
+- More non-emergency visit guidance
 - Specialist visit navigation
 - Pharmacy-only visits
 - Additional cities support
@@ -70,15 +62,10 @@ mediguide-china/
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd chmed
+cd MediGuide-China/mediguide-china
 ```
 
-2. Navigate to the project directory:
-```bash
-cd mediguide-china
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
@@ -123,7 +110,7 @@ npm run lint
 2. **Home**: Select the type of visit (currently only "General Checkup" is active)
 3. **City Selection**: Choose your city (currently Beijing only)
 4. **Insurance Question**: Indicate if you have international health insurance
-5. **Hospital Recommendations**: View recommended hospitals based on your inputs
+5. **Hospital Options**: View static hospital options with source links and verification reminders
 6. **Visit Progress**: Follow step-by-step guidance through the hospital visit
 7. **Step Details**: Access detailed information for each step
 
@@ -146,14 +133,21 @@ npm run lint
 - Progress indicator for user feedback
 
 ### HospitalRecommendation
-- Displays recommended hospitals based on user inputs
-- Hospital details and contact information
+- Displays static hospital options based on city selection
+- Hospital details, source links, and contact information
 - Navigation to visit progress
 
 ### VisitProgress
 - Step-by-step guidance through hospital visit
 - Progress tracking
 - Links to detailed step information
+
+## Compliance Notes
+
+- License: MIT, see [LICENSE](LICENSE).
+- Third-party notices: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- Privacy notice: see [PRIVACY.md](PRIVACY.md).
+- Data sources and medical scope: see [DATA_SOURCES.md](DATA_SOURCES.md).
 
 ## Important Disclaimers
 
@@ -163,6 +157,7 @@ This application:
 - Does NOT guarantee hospital availability, services, or wait times
 - Does NOT verify insurance coverage or payment information
 - Does NOT offer emergency medical services
+- Is NOT affiliated with the hospitals listed in the app
 
 **Always consult qualified healthcare professionals for all medical decisions.**
 
@@ -187,17 +182,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Important Medical Disclaimer
 
-**⚠️ CRITICAL LEGAL NOTICE:**
+**Critical legal notice:**
 
 MediGuide China is a navigation and information tool only. It is **NOT**:
 - Medical advice
 - A substitute for professional medical consultation
 - A diagnosis or treatment recommendation tool
 - A guarantee of hospital services or availability
+- An official or affiliated hospital service
 
 **Always consult qualified healthcare professionals for all medical decisions.**
 
-Users assume all responsibility for decisions made using this tool. Contributors and maintainers are not liable for any medical outcomes, misuse, or damages resulting from the use of this application.
+Users assume responsibility for verifying information before relying on it. Contributors and maintainers are not liable for medical outcomes, misuse, or damages resulting from use of this application.
 
 ## Contact & Support
 

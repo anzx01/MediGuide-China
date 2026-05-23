@@ -74,7 +74,9 @@ function CitySelection() {
               <h2 className="card-title mb-2" style={{ fontSize: '24px' }}>
                 Do you have international health insurance?
               </h2>
-              <p className="card-description mb-4">This helps us recommend the right hospital</p>
+              <p className="card-description mb-4">
+                This helps us show options to discuss with the hospital and your insurer
+              </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <button

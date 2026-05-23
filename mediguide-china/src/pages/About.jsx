@@ -36,6 +36,7 @@ function About() {
           <li>Guarantee hospital availability, services, or wait times</li>
           <li>Verify insurance coverage or payment information</li>
           <li>Offer emergency medical services</li>
+          <li>Represent or claim affiliation with any listed hospital</li>
         </ul>
         <p>
           <strong>Always consult qualified healthcare professionals for all medical decisions.</strong>
@@ -43,6 +44,15 @@ function About() {
         <p style={{ fontSize: '14px', marginTop: '15px' }}>
           The information provided is for navigation purposes only and may not be current.
           Hospital details, procedures, and availability can change without notice.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: '30px' }}>
+        <h2>Data and privacy</h2>
+        <p>
+          Hospital entries are static MVP data with source links shown in the app.
+          The app has no backend and stores only disclaimer acceptance and visit progress
+          in your browser localStorage.
         </p>
       </section>
 

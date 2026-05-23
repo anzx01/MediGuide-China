@@ -1,14 +1,15 @@
 # MediGuide China - MVP
 
-A navigation tool to help English-speaking visitors navigate Chinese hospitals. This is **NOT medical advice** - it's a step-by-step guide for finding your way through the hospital visit process.
+A static navigation tool to help English-speaking visitors prepare for non-emergency hospital visits in China. This is **not medical advice** and does not provide diagnosis, triage, treatment recommendations, insurance verification, or emergency services.
 
 ## What This MVP Does
 
 MediGuide China provides:
-- Hospital location and contact information for Beijing
+- Static hospital location and contact information for Beijing
 - Step-by-step navigation through a general checkup visit
 - English and Chinese phrases for common situations
 - Progress tracking through your hospital visit
+- Source links and verification reminders for hospital data
 
 ## What This MVP Does NOT Do
 
@@ -18,6 +19,7 @@ This app does NOT:
 - Guarantee hospital availability or services
 - Verify insurance coverage
 - Offer emergency medical services
+- Claim affiliation with listed hospitals
 
 **Always consult qualified healthcare professionals for all medical decisions.**
 
@@ -94,7 +96,7 @@ npm run build
    - Question 2: Choose "Yes, I have insurance" or "No insurance"
 
 4. **Hospital Recommendation**
-   - See 2 hospitals with details:
+   - See 2 static hospital options with source links:
      - Peking University International Hospital
      - Beijing United Family Hospital
    - Click "Start my visit" on either hospital
@@ -176,14 +178,16 @@ npm run build
 ## Data Files
 
 ### hospitals.json
-Contains 2 hospitals with:
+Contains 2 static hospital entries with:
 - Name (English + Chinese)
 - Address (English + Chinese)
 - Phone number
-- English proficiency level
-- Wait time estimates
-- Insurance acceptance
+- Service languages listed by the source
+- Static wait-time confirmation note
+- Insurance confirmation note
 - GPS coordinates
+- Source URL
+- Last-reviewed date
 
 ### visitFlow.json
 Contains 5 steps with:
@@ -210,7 +214,7 @@ This MVP intentionally has:
 ## Future Enhancements (Not in MVP)
 
 - More cities and hospitals
-- Emergency and specialist visit flows
+- Additional non-emergency and specialist visit flows
 - Real-time wait times
 - Map integration
 - Insurance verification
@@ -218,12 +222,14 @@ This MVP intentionally has:
 - Push notifications
 - Offline mode (PWA)
 
-## License
+## License and Notices
 
-This is an MVP prototype for demonstration purposes.
+This project is licensed under the MIT License. See `../LICENSE`.
+
+Third-party notices are documented in `../THIRD_PARTY_NOTICES.md`. Data source and privacy notes are documented in `../DATA_SOURCES.md` and `../PRIVACY.md`.
 
 ## Disclaimer
 
 **IMPORTANT: This application is a navigation tool only and does NOT provide medical advice.**
 
-Always consult qualified healthcare professionals for medical decisions. Hospital information may not be current. Use at your own risk.
+Always consult qualified healthcare professionals for medical decisions. Hospital information may not be current. Verify addresses, phone numbers, services, insurance coverage, and availability directly before visiting.

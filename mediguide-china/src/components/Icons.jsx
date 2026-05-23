@@ -1,4 +1,5 @@
-// Heroicons-style SVG icons for MediGuide China
+// Some icon path data is adapted from Heroicons, which is MIT licensed.
+// See THIRD_PARTY_NOTICES.md for attribution details.
 
 export const HospitalIcon = ({ className = "w-6 h-6" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">

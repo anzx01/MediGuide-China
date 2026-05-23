@@ -58,7 +58,7 @@ function DisclaimerModal({ onAccept }) {
 
         <div className="alert alert-warning mb-4">
           <p style={{ fontSize: '18px', fontWeight: '700', margin: 0 }}>
-            This is NOT medical advice.
+            This is NOT medical advice and is not for emergencies.
           </p>
         </div>
 
@@ -83,6 +83,7 @@ function DisclaimerModal({ onAccept }) {
               <li>Replace professional medical consultation</li>
               <li>Guarantee hospital availability or services</li>
               <li>Verify insurance coverage</li>
+              <li>Provide emergency medical services</li>
             </ul>
           </div>
 
@@ -91,8 +92,9 @@ function DisclaimerModal({ onAccept }) {
           </div>
 
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginTop: '20px', lineHeight: '1.6' }}>
-            By clicking "I Understand", you acknowledge that you understand this is a navigation tool only
-            and not a substitute for professional medical advice.
+            If you may be having a medical emergency, contact local emergency services immediately.
+            Hospital data is static, may be outdated, and does not imply affiliation or endorsement.
+            By clicking "I Understand", you acknowledge that this is a navigation tool only.
           </p>
         </div>
 

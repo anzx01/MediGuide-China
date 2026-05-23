@@ -7,7 +7,7 @@ function HospitalRecommendation() {
   const [searchParams] = useSearchParams()
 
   const city = searchParams.get('city')
-  const insurance = searchParams.get('insurance')
+  const cityLabel = city === 'beijing' ? 'Beijing' : city || 'your selected city'
 
   const handleStartVisit = (hospitalId) => {
     navigate(`/visit/${hospitalId}`)
@@ -16,9 +16,9 @@ function HospitalRecommendation() {
   return (
     <div className="container">
       <div className="page-header">
-        <h1 className="page-title">Recommended Hospitals</h1>
+        <h1 className="page-title">Hospital Options</h1>
         <p className="page-subtitle">
-          Based on your answers, here are 2 hospitals in {city} with English-speaking staff
+          Static MVP information for {cityLabel}. Confirm details before visiting.
         </p>
       </div>
 
@@ -27,7 +27,8 @@ function HospitalRecommendation() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <InfoIcon className="w-6 h-6" style={{ flexShrink: 0 }} />
             <div>
-              <strong>Perfect match!</strong> Both hospitals accept international insurance and have English-speaking staff.
+              <strong>Verify before you go.</strong> Addresses, services, billing, and wait times can change.
+              This app is not affiliated with the hospitals listed here.
             </div>
           </div>
         </div>
@@ -55,7 +56,10 @@ function HospitalRecommendation() {
                     <PhoneIcon className="w-5 h-5" style={{ color: 'var(--primary-color)' }} />
                     <span className="info-label">Phone</span>
                   </div>
-                  <span className="info-value">{hospital.phone}</span>
+                  <span className="info-value">
+                    {hospital.phone}
+                    {hospital.serviceCenter ? ` / ${hospital.serviceCenter}` : ''}
+                  </span>
                 </div>
                 <div className="info-row">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -70,20 +74,40 @@ function HospitalRecommendation() {
                     <span className="info-label">Insurance</span>
                   </div>
                   <span className="info-value">
-                    {hospital.acceptsInsurance ? (
+                    {hospital.acceptsInsurance === true ? (
                       <span className="badge badge-success">Accepted</span>
-                    ) : (
+                    ) : hospital.acceptsInsurance === false ? (
                       <span className="badge badge-warning">Not Accepted</span>
+                    ) : (
+                      <span className="badge badge-warning">Confirm Directly</span>
                     )}
+                  </span>
+                </div>
+                <p className="card-description" style={{ fontSize: '13px', marginTop: '-8px', marginBottom: '12px' }}>
+                  {hospital.insuranceNote}
+                </p>
+                <div className="info-row">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <InfoIcon className="w-5 h-5" style={{ color: 'var(--primary-color)' }} />
+                    <span className="info-label">Languages</span>
+                  </div>
+                  <span className="info-value">
+                    <span className="badge badge-success">{hospital.serviceLanguages?.join(', ')}</span>
                   </span>
                 </div>
                 <div className="info-row">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <InfoIcon className="w-5 h-5" style={{ color: 'var(--primary-color)' }} />
-                    <span className="info-label">English</span>
+                    <span className="info-label">Source</span>
                   </div>
                   <span className="info-value">
-                    <span className="badge badge-success">High Level</span>
+                    <a href={hospital.sourceUrl} target="_blank" rel="noreferrer">
+                      {hospital.dataSource}
+                    </a>
+                    <br />
+                    <span className="card-description" style={{ fontSize: '12px' }}>
+                      Reviewed {hospital.lastReviewed}
+                    </span>
                   </span>
                 </div>
               </div>

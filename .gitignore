@@ -1,0 +1,32 @@
+# Local AI/tooling state
+.agents/
+.claude/
+.codex/
+
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+*.local
+
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+mediguide-china/node_modules/
+mediguide-china/dist/
+mediguide-china/dist-ssr/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
