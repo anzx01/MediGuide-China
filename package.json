@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix mediguide-china run dev",
+    "build": "npm --prefix mediguide-china run build",
+    "lint": "npm --prefix mediguide-china run lint",
+    "preview": "npm --prefix mediguide-china run preview"
+  }
+}
