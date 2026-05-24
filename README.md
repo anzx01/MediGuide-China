@@ -4,9 +4,13 @@ MediGuide China is a static navigation prototype for English-speaking visitors p
 
 **Important:** This is not medical advice, diagnosis, triage, insurance verification, or emergency support. For possible emergencies, contact local emergency services immediately.
 
-## Features
+![1779611640475](image/README/1779611640475.png)
+
+
+## Features![1779611669070](image/README/1779611669070.png)
 
 ### Current Features (MVP v1.0.0)
+
 - **Situation Selection**: Choose from different visit types (General Checkup, Emergency, Specialist Visit, Pharmacy)
 - **City-Based Options**: Static hospital information for Beijing
 - **Insurance Prompt**: Reminds users to confirm billing and coverage directly
@@ -15,6 +19,7 @@ MediGuide China is a static navigation prototype for English-speaking visitors p
 - **Disclaimer Modal**: Clear communication about the app's limitations and purpose
 
 ### Coming Soon
+
 - More non-emergency visit guidance
 - Specialist visit navigation
 - Pharmacy-only visits
@@ -54,18 +59,21 @@ mediguide-china/
 ## Installation
 
 ### Prerequisites
+
 - Node.js (v16 or higher recommended)
 - npm or yarn
 
 ### Setup
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd MediGuide-China/mediguide-china
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
@@ -75,6 +83,7 @@ npm install
 ### Development
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -84,6 +93,7 @@ The application will be available at `http://localhost:5173` (or another port if
 ### Build
 
 Create a production build:
+
 ```bash
 npm run build
 ```
@@ -93,6 +103,7 @@ The built files will be in the `dist/` directory.
 ### Preview
 
 Preview the production build locally:
+
 ```bash
 npm run preview
 ```
@@ -100,6 +111,7 @@ npm run preview
 ### Lint
 
 Run ESLint to check code quality:
+
 ```bash
 npm run lint
 ```
@@ -117,27 +129,32 @@ npm run lint
 ## Key Components
 
 ### DisclaimerModal
+
 - Displays important legal and medical disclaimers
 - Must be accepted before accessing the app
 - Ensures users understand the app's limitations
 
 ### Home
+
 - Main landing page
 - Situation selection (General Checkup, Emergency, Specialist, Pharmacy)
 - Currently only General Checkup is enabled
 
 ### CitySelection
+
 - Two-step questionnaire
 - City selection (Beijing)
 - Insurance status (Yes/No)
 - Progress indicator for user feedback
 
 ### HospitalRecommendation
+
 - Displays static hospital options based on city selection
 - Hospital details, source links, and contact information
 - Navigation to visit progress
 
 ### VisitProgress
+
 - Step-by-step guidance through hospital visit
 - Progress tracking
 - Links to detailed step information
@@ -152,6 +169,7 @@ npm run lint
 ## Important Disclaimers
 
 This application:
+
 - Does NOT provide medical advice, diagnosis, or treatment recommendations
 - Does NOT replace professional medical consultation
 - Does NOT guarantee hospital availability, services, or wait times
@@ -171,6 +189,7 @@ This application:
 ## Contributing
 
 Contributions are welcome! Please ensure:
+
 - Code follows the existing style and conventions
 - All new features include appropriate error handling
 - Medical disclaimers remain prominent and clear
@@ -185,6 +204,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Critical legal notice:**
 
 MediGuide China is a navigation and information tool only. It is **NOT**:
+
 - Medical advice
 - A substitute for professional medical consultation
 - A diagnosis or treatment recommendation tool
